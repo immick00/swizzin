@@ -164,7 +164,7 @@ function deluge_version_info() {
             pythonver=python3
             pythonmajor=$(get_candidate_version python3 | cut -d. -f1-2)
             python=python3
-            deluge_git_branch="$(git ls-remote -q -t --refs https://git.deluge-torrent.org/deluge | awk '{sub("refs/tags/", ""); print $2 }' | awk '!/^$/' | sort -rV | grep "deluge-2.2." | grep -v "dev" | grep -v "post" | head -n 1)"
+            deluge_git_branch="$(git ls-remote -q -t --refs https://github.com/deluge-torrent/deluge | awk '{sub("refs/tags/", ""); print $2 }' | awk '!/^$/' | sort -rV | grep "deluge-2.2." | grep -v "dev" | grep -v "post" | head -n 1)"
             # deluge_git_branch=master
             ;;
         *)
